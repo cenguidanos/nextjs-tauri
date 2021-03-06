@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "tauri": "tauri",
+    "next": "next",
+    "dev:frontend": "next dev",
+    "dev:tauri": "tauri dev",
+    "build:frontend": "next build && next export",
+    "build:tauri": "tauri build",
+    "exec:app": "./src-tauri/target/release/bundle/appimage/next-tauri-app.AppImage"
   },
   "dependencies": {
     "next": "10.0.7",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "tauri": "^0.14.1"
   }
 }
